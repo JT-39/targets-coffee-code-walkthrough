@@ -9,14 +9,14 @@ get_nat_absence_data <- function(file_path) {
 
 # Extract the start year from academic year
 extract_year <- function(date) {
-  paste0(substr(date, 1, 4))
+  paste0("01-01-",substr(date, 1, 2),substr(date, 5, 6))
 }
 
 # Format the year as a date
 format_time_period <- function(data) {
   data |>
-    dplyr::mutate(Date = lubridate::year(as.Date(extract_year(time_period),
-                                                 format = "%Y")),
+    dplyr::mutate(Date = as.Date(extract_year(time_period),
+                                 format = "%d-%m-%Y"),
                   .after=time_period)
 }
 
