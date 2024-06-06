@@ -27,6 +27,7 @@ packages.
 
 The main files are below:
 
+```
 ├── analysis.R
 ├── _targets_analysis.R
 ├── _data/
@@ -34,6 +35,7 @@ The main files are below:
 ├── R/
 │   ├── functions.R
 │   ├── plot_styles.R
+```
 
 The plot_styles.R script contains some functions taken from the
 [KASStylesR](https://github.com/wgdsu/KASStylesR) repository.
